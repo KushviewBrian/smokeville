@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMOKEVILLE - Fort Wayne's Premier Late-Night Destination</title>
+    <meta name="description" content="Fort Wayne's highest-rated smoke shop. Open 8AM-12AM daily. Premium vapes, e-liquids, accessories, and glass. 4.9★ from 100+ reviews.">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SmokeVille 1 LLC",
+      "image": "https://smokevillefortwayne.com/images/store-exterior.jpg",
+      "telephone": "+12607553072",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "710 E Coliseum Blvd",
+        "addressLocality": "Fort Wayne",
+        "addressRegion": "IN",
+        "postalCode": "46805",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "00:00"
+        }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "100"
+      }
+    }
+    </script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smokevillefortwayne.com/">
+    <meta property="og:title" content="SMOKEVILLE - Fort Wayne's Premier Late-Night Destination">
+    <meta property="og:description" content="Fort Wayne's highest-rated smoke shop. Open 8AM-12AM daily. Premium vapes, e-liquids, accessories, and glass.">
+    <meta property="og:image" content="https://smokevillefortwayne.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smokevillefortwayne.com/">
+    <meta property="twitter:title" content="SMOKEVILLE - Fort Wayne's Premier Late-Night Destination">
+    <meta property="twitter:description" content="Fort Wayne's highest-rated smoke shop. Open 8AM-12AM daily. Premium vapes, e-liquids, accessories, and glass.">
+    <meta property="twitter:image" content="https://smokevillefortwayne.com/images/twitter-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Custom Properties for Theme */
+        :root {
+            --primary: #0D0D0D;
+            --accent-1: #F7FF00;
+            --accent-2: #39FF14;
+            --supporting: #1A1A1A;
+            --text-primary: #F5F5F5;
+            --text-accent: #F7FF00;
+            --gradient-start: #F7FF00;
+            --gradient-end: #39FF14;
+            --transition-smooth: all 0.3s ease;
+            --transition-fast: all 0.15s ease;
+            --shadow-glow: 0 0 15px var(--accent-1), 0 0 30px rgba(247, 255, 0, 0.3);
+            --shadow-glow-green: 0 0 15px var(--accent-2), 0 0 30px rgba(57, 255, 20, 0.3);
+            --glass-bg: rgba(26, 26, 0.2);
+            --glass-border: 1px solid rgba(57, 255, 20, 0.3);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-yellow {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: var(--primary);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px var(--accent-1), 0 0 50px rgba(247, 255, 0, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-2);
+            color: var(--accent-2);
+            box-shadow: var(--shadow-glow-green);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-2);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px var(--accent-2), 0 0 50px rgba(57, 255, 20, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: auto;
+            min-height: 60vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding-top: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(13, 13, 0.8) 0%, rgba(13, 13, 1) 70%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            margin-top: 0;
+        }
+        
+        #locations {
+            padding-top: 20px; /* Reduce padding above locations section */
+        }
+
+        .logo {
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(247, 255, 0, 0.5);
+        }
+        
+        .logo-img {
+            max-width: 390px;
+            height: auto;
+            margin-top: 0;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px rgba(247, 255, 0, 0.5));
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: var(--accent-2);
+            margin-bottom: 30px;
+            text-shadow: 0 10px rgba(57, 255, 20, 0.5);
+        }
+
+        .reviews {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--accent-1);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            border-radius: 50px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--accent-1);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5px;
+            margin-bottom: 20px; /* Added to create appropriate spacing */
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: -80px;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 13, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--accent-2);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            top: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-1);
+        }
+
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+        }
+
+        /* Why SmokeVille Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            background: var(--supporting);
+            border: 2px solid var(--accent-2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow-green);
+        }
+
+        .why-icon {
+            font-size: 48px;
+            color: var(--accent-1);
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px var(--accent-1);
+        }
+
+        .why-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--accent-1);
+        }
+
+        .why-desc {
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        /* What We Carry Section */
+        .carry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .carry-card {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            color: var(--primary);
+        }
+
+        .carry-card:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .carry-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .carry-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .carry-desc {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Locations Section */
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .location-card {
+            background: var(--supporting);
+            border: 2px solid var(--accent-2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .location-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow-green);
+        }
+
+        .location-image {
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--supporting);
+            padding: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .stars {
+            color: var(--accent-1);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .customer {
+            font-size: 16px;
+            color: var(--accent-2);
+        }
+
+        /* Map Section */
+        .map-container {
+            position: relative;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: var(--supporting);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-2);
+            font-size: 18px;
+        }
+
+        .location-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .detail-item {
+            margin-bottom: 25px;
+        }
+
+        .detail-icon {
+            font-size: 24px;
+            color: var(--accent-2);
+            margin-bottom: 10px;
+        }
+
+        .detail-title {
+            font-size: 18px;
+            color: var(--accent-1);
+            margin-bottom: 5px;
+        }
+
+        .detail-text {
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter-title {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .newsletter-subtitle {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .newsletter-btn {
+            background: var(--primary);
+            color: var(--accent-1);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .newsletter-btn:hover {
+            background: var(--accent-1);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            border-top: 2px solid var(--accent-1);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--accent-1);
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-1);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--supporting);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-2);
+            transition: var(--transition-smooth);
+        }
+
+        .social-icon:hover {
+            background: var(--accent-2);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow-green);
+        }
+
+        .age-verification {
+            background: var(--supporting);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 1px solid var(--accent-1);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(245, 245, 245, 0.6);
+            font-size: 14px;
+        }
+
+        /* Particles Background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .carry-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 48px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .carry-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="age-verification" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Age Verification Required</h2>
+            <p>You must be 21 or older to enter this site.</p>
+            <button id="age-yes" class="btn btn-yellow">I am 21+</button>
+            <button id="age-no" class="btn btn-outline">I am under 21</button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="logo.png" alt="SmokeVille Logo" style="height: 40px; filter: drop-shadow(0 0 5px rgba(247, 255, 0, 0.5));">
+                </div>
+                <div class="nav-links">
+                    <a href="#hours" class="nav-link">⏰ Hours</a>
+                    <a href="#location" class="nav-link">📍 Locations</a>
+                    <a href="#call" class="nav-link">☎️ Call Now</a>
+                    <a href="#products" class="nav-link">🛍️ Products</a>
+                    <a href="#reviews" class="nav-link">⭐ Reviews</a>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <img src="logo.png" alt="SMOKEVILLE" class="logo-img">
+            <p class="subtitle">Fort Wayne's Premier Late-Night Destination</p>
+            <div class="reviews">⭐⭐⭐⭐⭐ 4.9 from 100+ Reviews</div>
+            <div class="status-badge" id="status-badge">🟢 OPEN NOW • Closes at 12:00 AM</div>
+            <div class="cta-buttons">
+                <a href="#location" class="btn btn-yellow">VISIT US TODAY</a>
+                <a href="#products" class="btn btn-outline">WHAT WE CARRY</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="section" id="locations">
+        <div class="container">
+            <h2 class="section-title">OUR LOCATIONS</h2>
+            <div class="location-grid">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="smokeville/north/storefront.webp" alt="SmokeVille North Location" style="width:100%; height:250px; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3 class="why-title">NORTH LOCATION</h3>
+                    <p class="why-desc">710 E Coliseum Blvd, Fort Wayne, IN 46805</p>
+                    <p class="why-desc">Open Daily: 8:00 AM – 12:00 AM</p>
+                    <p class="why-desc">Phone: (260) 755-3072</p>
+                    <div style="margin-top:15px;">
+                        <a href="tel:+12607553072" class="btn btn-outline">CALL NOW</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow" style="margin-left:10px;">DIRECTIONS</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="smokeville/southside/southside.webp" alt="SmokeVille Southside Location" style="width:100%; height:250px; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3 class="why-title">SOUTH LOCATION</h3>
+                    <p class="why-desc">4225 Lafayette St, Fort Wayne, IN 46806</p>
+                    <p class="why-desc">Open Wed-Tue: 9:30 AM – 10:00 PM</p>
+                    <p class="why-desc">Phone: (260) 508-6666</p>
+                    <div style="margin-top:15px;">
+                        <a href="tel:+12605086666" class="btn btn-outline">CALL NOW</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-yellow" style="margin-left:10px;">DIRECTIONS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SmokeVille Section -->
+    <section class="section" id="why">
+        <div class="container">
+            <h2 class="section-title">WHY SMOKEVILLE</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">⭐</div>
+                    <h3 class="why-title">4.9 RATING</h3>
+                    <p class="why-desc">Fort Wayne's Best Reviewed Smoke Shop</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⏰</div>
+                    <h3 class="why-title">18-HOUR DAYS</h3>
+                    <p class="why-desc">Open 8 AM–12 AM When Others Close We're Just Opening</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📍</div>
+                    <h3 class="why-title">PRIME LOCATION</h3>
+                    <p class="why-desc">710 E Coliseum Blvd Easy Access, Free Parking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Carry Section -->
+    <section class="section" id="products">
+        <div class="container">
+            <h2 class="section-title">WHAT WE CARRY</h2>
+            <div class="carry-grid">
+                <div class="carry-card">
+                    <div class="carry-icon">💨</div>
+                    <img src="smokeville/store.webp" alt="Vape Products" style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                    <h3 class="carry-title">Vapes</h3>
+                    <p class="carry-desc">Disposables, Mods & Pods, Starter Kits</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">🧪</div>
+                    <h3 class="carry-title">E-Liquids</h3>
+                    <p class="carry-desc">Huge Flavor Selection, Salts & Freebase</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">🎨</div>
+                    <h3 class="carry-title">Accessories</h3>
+                    <p class="carry-desc">Papers, Lighters, Grinders & More</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">💎</div>
+                    <img src="smokeville/glass.webp" alt="Glass Products" style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                    <h3 class="carry-title">Premium Glass</h3>
+                    <p class="carry-desc">Pipes, Bongs, Specialty Items</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">🔥</div>
+                    <img src="smokeville/humidor.webp" alt="Tobacco Products" style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                    <h3 class="carry-title">Tobacco</h3>
+                    <p class="carry-desc">Cigars, Wraps</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">🎁</div>
+                    <h3 class="carry-title">New Arrivals</h3>
+                    <p class="carry-desc">Fresh Stock, Weekly Drops</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">💰</div>
+                    <h3 class="carry-title">Daily Deals</h3>
+                    <p class="carry-desc">Check In-Store, Unbeatable Prices</p>
+                </div>
+                <div class="carry-card">
+                    <div class="carry-icon">🌟</div>
+                    <h3 class="carry-title">Best Sellers</h3>
+                    <p class="carry-desc">Customer Favorites, Tried & True</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: var(--accent-2); font-size: 16px;">Selection varies. Visit us in-store for current availability and exclusive deals.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <h2 class="section-title">CUSTOMER LOVE</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Great selection and the staff is super friendly. Always open when I need them!"</p>
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p class="customer">— Marcus T.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Best vape deals in Fort Wayne. Been coming here for years, never disappointed."</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="customer">— Jessica R.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Fast service, knowledgeable staff, open late. Everything you need in one spot."</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="customer">— David K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <section class="section" id="location" style="padding-top:20px;">
+        <div class="container">
+            <h2 class="section-title">LOCATION & HOURS</h2>
+            <div class="location-grid">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2390.938050467023!2d-85.1167303!3d41.076252!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!2m1!1s710+E+Coliseum+Blvd+Fort+Wayne+IN!2m2!1d-85.1167303!2d41.076252!4m2!1d-85.1167303!2d41.076252!3m2!1s0x883c85b01352dd6b%3A0xdcd3a3bde90ee9d9!2s710+E+Coliseum+Blvd%2C+Fort+Wayne%2C+IN+46805!5e0!3m2!1sen!2sus!4v1733858472811!5m2!1sen!2sus&markers=!1m2!1s710+E+Coliseum+Blvd+Fort+Wayne+IN!2s4225+Lafayette+St+Fort+Wayne+IN" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius:15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="location-details">
+                    <!-- Main Location -->
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <h3 class="detail-title">MAIN LOCATION</h3>
+                        <p class="detail-text">710 E Coliseum Blvd<br>Fort Wayne, IN 46805</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">⏰</div>
+                        <h3 class="detail-title">HOURS</h3>
+                        <p class="detail-text">Open Daily<br>8:00 AM – 12:00 AM (Midnight)</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">☎️</div>
+                        <h3 class="detail-title">CALL US</h3>
+                        <p class="detail-text">(260) 755-3072</p>
+                    </div>
+                    <!-- Southside Location -->
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <h3 class="detail-title">SOUTHSIDE LOCATION</h3>
+                        <p class="detail-text">4225 Lafayette St<br>Fort Wayne, IN 46806</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">⏰</div>
+                        <h3 class="detail-title">HOURS</h3>
+                        <p class="detail-text">Wed-Tue<br>9:30 AM – 10:00 PM</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">☎️</div>
+                        <h3 class="detail-title">CALL US</h3>
+                        <p class="detail-text">(260) 508-6666</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🚗</div>
+                        <h3 class="detail-title">PARKING</h3>
+                        <p class="detail-text">Free parking available at both locations<br>Easy access from major roads</p>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow">Main Location Directions</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-outline" style="margin-left:5px;">Southside Directions</a>
+                        <a href="tel:+12607553072" class="btn btn-outline" style="margin-left:5px;">Call Main</a>
+                        <a href="tel:+12605086666" class="btn btn-outline" style="margin-left:5px;">Call Southside</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Connected Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="newsletter-title">⚡ STAY IN THE LOOP ⚡</h2>
+            <p class="newsletter-subtitle">Get exclusive deals, new arrival alerts, and special offers delivered to your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+            </form>
+            <p>Join 1,000+ customers getting insider access</p>
+            <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">We respect your inbox. No spam, ever.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>SMOKEVILLE</h3>
+                    <p>710 E Coliseum Blvd<br>Fort Wayne, IN 46805<br>(260) 755-3072</p>
+                </div>
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <div class="footer-links">
+                        <a href="#hours">About</a>
+                        <a href="#products">Products</a>
+                        <a href="#reviews">Reviews</a>
+                        <a href="#location">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TT</a>
+                    </div>
+                </div>
+            <div class="age-verification">
+                <p>🔞 21+ ONLY</p>
+                <p>We comply with all local and federal regulations regarding age-restricted products.</p>
+            </div>
+            <div class="copyright">
+                <p>© 2025 SmokeVille 1 LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Age Verification
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageVerification = document.getElementById('age-verification');
+            const ageYes = document.getElementById('age-yes');
+            const ageNo = document.getElementById('age-no');
+            
+            // Check if user has already verified age
+            if (!localStorage.getItem('ageVerified')) {
+                ageVerification.style.display = 'flex';
+            } else {
+                ageVerification.style.display = 'none';
+            }
+            
+            ageYes.addEventListener('click', function() {
+                localStorage.setItem('ageVerified', 'true');
+                ageVerification.style.display = 'none';
+            });
+            
+            ageNo.addEventListener('click', function() {
+                window.location.href = 'https://www.google.com';
+            });
+            
+            // Update status badge based on current time
+            function updateStatus() {
+                const now = new Date();
+                const currentHour = now.getHours();
+                
+                // Assuming store is open from 8 AM to midnight (0-23)
+                const isOpen = currentHour >= 8 && currentHour < 24;
+                
+                const statusBadge = document.getElementById('status-badge');
+                if (isOpen) {
+                    statusBadge.innerHTML = '🟢 OPEN NOW • Closes at 12:00 AM';
+                    statusBadge.style.color = '#F7FF00';
+                } else {
+                    statusBadge.innerHTML = '🔴 CLOSED • Opens at 8:00 AM';
+                    statusBadge.style.color = '#FF6B6B';
+                }
+            }
+            
+            updateStatus();
+            setInterval(updateStatus, 60000); // Update every minute
+            
+            // Sticky navbar
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#call') {
+                        window.location.href = 'tel:+12607553072';
+                        return;
+                    }
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Newsletter form submission
+            const newsletterForm = document.getElementById('newsletter-form');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const emailInput = this.querySelector('input[type="email"]');
+                const email = emailInput.value;
+                
+                // Simple validation
+                if(!isValidEmail(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // In a real implementation, you would send this to your email service
+                alert('Thank you for subscribing! Welcome to the SmokeVille family.');
+                this.reset();
+            });
+            
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            // Initialize particles.js for hero background
+            if(typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: {
+                            value: 50,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: ['#F7FF00', '#39FF14']
+                        },
+                        shape: {
+                            type: 'circle',
+                            stroke: {
+                                width: 0,
+                                color: '#000000'
+                            }
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: 3,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 2,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#39FF14',
+                            opacity: 0.4,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            resize: true
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+        });
+    </script>
+</body>
+</html>
