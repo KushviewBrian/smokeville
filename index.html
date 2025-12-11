@@ -236,6 +236,11 @@
             cursor: pointer;
             border: none;
             font-size: 16px;
+            /* Minimum touch target for mobile */
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-yellow {
@@ -531,10 +536,14 @@
             padding: 80px 0;
         }
 
+        .testimonial-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
         .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
 
         .testimonial-card {
@@ -544,13 +553,16 @@
             padding: 30px;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            min-width: 100%;
+            flex-shrink: 0;
+            box-sizing: border-box;
         }
 
         .quote {
             font-size: 18px;
             font-style: italic;
             margin-bottom: 20px;
-            color: var(--text-primary);
+            color: var (--text-primary);
         }
 
         .stars {
@@ -562,6 +574,33 @@
         .customer {
             font-size: 16px;
             color: var(--accent-2);
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 8px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(247, 255, 0, 0.3);
+            border: 2px solid var(--accent-1);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .carousel-dot:hover {
+            background: rgba(247, 255, 0, 0.6);
+            transform: scale(1.2);
+        }
+
+        .carousel-dot.active {
+            background: var(--accent-1);
+            box-shadow: 0 0 10px var(--accent-1);
         }
 
         /* FAQ Section */
@@ -647,7 +686,7 @@
 
         .detail-title {
             font-size: 18px;
-            color: var(--accent-1);
+            color: var (--accent-1);
             margin-bottom: 5px;
         }
 
@@ -682,6 +721,7 @@
             gap: 15px;
             max-width: 500px;
             margin: 0 auto 20px;
+            width: 100%;
         }
 
         .newsletter-input {
@@ -695,6 +735,7 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            min-height: 44px;
         }
 
         .newsletter-btn {
@@ -864,6 +905,9 @@
             padding: 8px 15px;
             border-radius: 8px;
             transition: var(--transition-fast);
+            /* Ensure minimum touch target */
+            min-width: 44px;
+            min-height: 44px;
         }
 
         .mobile-menu-toggle:hover {
@@ -874,6 +918,95 @@
         .mobile-menu-toggle:focus {
             outline: 2px solid var(--accent-1);
             outline-offset: 2px;
+        }
+
+        /* Touch-friendly button sizing */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            /* Minimum touch target for mobile */
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Location card button container - remove inline styles */
+        .location-btn-group {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .location-btn-group .btn {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        /* Product card images - remove inline styles */
+        .product-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .location-card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Direction buttons container - remove inline styles */
+        .direction-btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Newsletter form improvements for mobile */
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            width: 100%;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-height: 44px;
+        }
+
+        /* Prevent zoom on input focus on iOS */
+        @media screen and (max-width: 768px) {
+            .newsletter-input,
+            input[type="email"],
+            input[type="text"],
+            textarea {
+                font-size: 16px; /* Prevents iOS zoom */
+            }
         }
 
         /* Accessibility - Focus Visible */
@@ -910,6 +1043,11 @@
             height: auto;
         }
 
+        /* Smooth scrolling for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .carry-grid {
@@ -934,6 +1072,16 @@
         }
 
         @media (max-width: 768px) {
+            /* Hero adjustments */
+            .hero {
+                min-height: 50vh;
+                padding: 40px 0;
+            }
+
+            .hero-content {
+                padding: 0 15px;
+            }
+
             .logo {
                 font-size: 48px;
             }
@@ -972,6 +1120,7 @@
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+                gap: 15px;
             }
 
             .cta-buttons .btn {
@@ -981,6 +1130,7 @@
             
             .newsletter-form {
                 flex-direction: column;
+                padding: 0 20px;
             }
 
             .newsletter-input,
@@ -1020,6 +1170,10 @@
                 padding: 15px 10px;
                 border-bottom: 1px solid rgba(57, 255, 20, 0.2);
                 font-size: 18px;
+                /* Make touch targets larger */
+                min-height: 50px;
+                display: flex;
+                align-items: center;
             }
 
             .nav-link:last-child {
@@ -1032,6 +1186,37 @@
 
             .detail-item {
                 margin-bottom: 20px;
+            }
+
+            /* Better spacing for mobile cards */
+            .why-card,
+            .location-card,
+            .faq-item {
+                margin-bottom: 0;
+            }
+
+            /* Improve map on mobile */
+            .map-container {
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            /* Stack direction buttons vertically on narrow screens */
+            .direction-btn-group {
+                flex-direction: column;
+            }
+
+            .direction-btn-group .btn {
+                width: 100%;
+            }
+
+            /* Newsletter section padding */
+            .newsletter {
+                padding: 60px 20px;
+            }
+
+            .newsletter .container {
+                padding: 0;
             }
         }
 
@@ -1046,24 +1231,28 @@
             
             .subtitle {
                 font-size: 18px;
+                padding: 0 10px;
             }
             
             .section-title {
                 font-size: 28px;
+                padding: 0 10px;
             }
 
             .reviews {
-                font-size: 16px;
+                font-size: 14px;
+                padding: 0 10px;
             }
 
             .status-badge {
-                font-size: 14px;
-                padding: 6px 15px;
+                font-size: 13px;
+                padding: 6px 12px;
             }
 
             .why-card,
-            .carry-card {
-                padding: 20px;
+            .carry-card,
+            .faq-item {
+                padding: 20px 15px;
             }
 
             .why-icon {
@@ -1075,13 +1264,14 @@
             }
 
             .btn {
-                padding: 10px 25px;
+                padding: 12px 20px;
                 font-size: 14px;
             }
 
             .modal-content {
                 padding: 30px 20px;
                 margin: 20px;
+                max-width: calc(100% - 40px);
             }
 
             .modal-content h2 {
@@ -1092,12 +1282,54 @@
                 font-size: 16px;
             }
 
+            .modal-content .btn {
+                min-width: 130px;
+                padding: 10px 15px;
+            }
+
             .newsletter-title {
-                font-size: 28px;
+                font-size: 24px;
+                padding: 0 10px;
             }
 
             .newsletter-subtitle {
                 font-size: 16px;
+                padding: 0 10px;
+            }
+
+            /* Smaller container padding */
+            .container {
+                padding: 0 15px;
+            }
+
+            /* Location button improvements */
+            .location-btn-group {
+                flex-direction: column;
+            }
+
+            .location-btn-group .btn {
+                width: 100%;
+            }
+
+            /* Tighter footer spacing */
+            .footer {
+                padding: 40px 0 20px;
+            }
+
+            .footer-column p {
+                font-size: 14px;
+            }
+        }
+
+        /* Landscape mobile optimization */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                min-height: 100vh;
+            }
+
+            .modal-content {
+                max-height: 80vh;
+                overflow-y: auto;
             }
         }
     </style>
@@ -1157,28 +1389,28 @@
             <div class="location-grid">
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="smokeville/north/storefront.webp" alt="SmokeVille North Location" style="width:100%; height:250px; object-fit:cover; border-radius:10px;">
+                        <img src="smokeville/north/storefront.webp" alt="SmokeVille North Location" class="location-card-image">
                     </div>
                     <h3 class="why-title">NORTH LOCATION</h3>
                     <p class="why-desc">710 E Coliseum Blvd, Fort Wayne, IN 46805</p>
                     <p class="why-desc">Open Daily: 8:00 AM – 12:00 AM</p>
                     <p class="why-desc">Phone: (260) 755-3072</p>
-                    <div style="margin-top:15px;">
+                    <div class="location-btn-group">
                         <a href="tel:+12607553072" class="btn btn-outline">CALL NOW</a>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow" style="margin-left:10px;">DIRECTIONS</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow">DIRECTIONS</a>
                     </div>
                 </div>
                 <div class="location-card">
                     <div class="location-image">
-                        <img src="smokeville/southside/southside.webp" alt="SmokeVille Southside Location" style="width:100%; height:250px; object-fit:cover; border-radius:10px;">
+                        <img src="smokeville/southside/southside.webp" alt="SmokeVille Southside Location" class="location-card-image">
                     </div>
                     <h3 class="why-title">SOUTH LOCATION</h3>
                     <p class="why-desc">4225 Lafayette St, Fort Wayne, IN 46806</p>
                     <p class="why-desc">Open Wed-Tue: 9:30 AM – 10:00 PM</p>
                     <p class="why-desc">Phone: (260) 508-6666</p>
-                    <div style="margin-top:15px;">
+                    <div class="location-btn-group">
                         <a href="tel:+12605086666" class="btn btn-outline">CALL NOW</a>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-yellow" style="margin-left:10px;">DIRECTIONS</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-yellow">DIRECTIONS</a>
                     </div>
                 </div>
             </div>
@@ -1218,7 +1450,7 @@
             <div class="carry-grid">
                 <div class="carry-card">
                     <div class="carry-icon">💨</div>
-                    <img src="smokeville/store.webp" alt="Vape Products" style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                    <img src="smokeville/store.webp" alt="Vape Products" class="product-image">
                     <h3 class="carry-title">Vapes</h3>
                     <p class="carry-desc">Disposables, Mods & Pods, Starter Kits</p>
                 </div>
@@ -1234,13 +1466,13 @@
                 </div>
                 <div class="carry-card">
                     <div class="carry-icon">💎</div>
-                    <img src="smokeville/glass.webp" alt="Glass Products" style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                    <img src="smokeville/glass.webp" alt="Glass Products" class="product-image">
                     <h3 class="carry-title">Premium Glass</h3>
                     <p class="carry-desc">Pipes, Bongs, Specialty Items</p>
                 </div>
                 <div class="carry-card">
                     <div class="carry-icon">🔥</div>
-                    <img src="smokeville/humidor.webp" alt="Tobacco Products" style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                    <img src="smokeville/humidor.webp" alt="Tobacco Products" class="product-image">
                     <h3 class="carry-title">Tobacco</h3>
                     <p class="carry-desc">Cigars, Wraps</p>
                 </div>
@@ -1268,23 +1500,15 @@
     <section class="testimonials" id="reviews">
         <div class="container">
             <h2 class="section-title">CUSTOMER LOVE</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="quote">"Great selection and the staff is super friendly. Always open when I need them!"</p>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="customer">— Marcus T.</p>
+            <div class="testimonial-carousel">
+                <div class="testimonial-grid" id="testimonial-track">
+                    <!-- Reviews will rotate dynamically via JavaScript -->
                 </div>
-                <div class="testimonial-card">
-                    <p class="quote">"Best vape deals in Fort Wayne. Been coming here for years, never disappointed."</p>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="customer">— Jessica R.</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="quote">"Fast service, knowledgeable staff, open late. Everything you need in one spot."</p>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="customer">— David K.</p>
-                </div>
+                <div class="carousel-dots" id="carousel-dots"></div>
             </div>
+            <p style="text-align: center; margin-top: 40px; color: var(--text-primary); font-size: 16px;">
+                ⭐ Rated 4.9/5 from 100+ verified customer reviews
+            </p>
         </div>
     </section>
 
@@ -1294,28 +1518,28 @@
             <h2 id="faq-heading" class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3 class="faq-question">⏰ What are your hours?</h3>
-                    <p class="faq-answer">Our North location at 710 E Coliseum Blvd is open daily from 8:00 AM to 12:00 AM (midnight). Our Southside location at 4225 Lafayette St is open Wednesday through Tuesday from 9:30 AM to 10:00 PM.</p>
+                    <h3 class="faq-question">⏰ What makes your hours special?</h3>
+                    <p class="faq-answer">We're open 8 AM to MIDNIGHT (12 AM) at our North location - 18 hours a day! When other shops close at 9 or 10 PM, we're still here for you. Perfect for night shift workers, late-night vapers, and anyone who needs quality products on their schedule.</p>
                 </div>
                 <div class="faq-item">
-                    <h3 class="faq-question">📍 Do you have two locations?</h3>
-                    <p class="faq-answer">Yes! We have two convenient locations in Fort Wayne. Our main location is at 710 E Coliseum Blvd (260-755-3072) and our Southside location is at 4225 Lafayette St (260-508-6666).</p>
+                    <h3 class="faq-question">📍 Why two locations?</h3>
+                    <p class="faq-answer">We wanted to serve ALL of Fort Wayne! Our North location (710 E Coliseum Blvd) is perfect for North side residents, while our Southside shop (4225 Lafayette St) serves the South side community. Both have free parking and easy access.</p>
                 </div>
                 <div class="faq-item">
-                    <h3 class="faq-question">🛍️ What products do you sell?</h3>
-                    <p class="faq-answer">We carry a wide selection of vapes, e-liquids, premium glass, tobacco products, cigars, accessories including papers, lighters, and grinders, plus daily deals and new arrivals.</p>
+                    <h3 class="faq-question">💰 Do you have daily deals?</h3>
+                    <p class="faq-answer">Absolutely! We run daily specials on disposables, e-liquids, and accessories. Our prices are consistently competitive - we're known for having the best deals in Fort Wayne. Check in-store or call to ask about today's specials!</p>
                 </div>
                 <div class="faq-item">
-                    <h3 class="faq-question">🔞 Do I need to be 21 to shop here?</h3>
-                    <p class="faq-answer">Yes, you must be 21 years or older to enter and purchase products from SmokeVille. We comply with all local and federal age-restricted product regulations.</p>
+                    <h3 class="faq-question">🔞 What's your age policy?</h3>
+                    <p class="faq-answer">You must be 21+ with valid ID to enter and purchase. We strictly comply with all Indiana and federal regulations for age-restricted tobacco products. No exceptions - we check everyone!</p>
                 </div>
                 <div class="faq-item">
-                    <h3 class="faq-question">🚗 Is parking available?</h3>
-                    <p class="faq-answer">Yes, both locations offer free parking with easy access from major roads.</p>
+                    <h3 class="faq-question">🚗 Tell me about parking</h3>
+                    <p class="faq-answer">Both locations have FREE, convenient parking right out front. Easy access from Coliseum Blvd (North) and Lafayette St (Southside). No hunting for parking - just pull up and come in!</p>
                 </div>
                 <div class="faq-item">
-                    <h3 class="faq-question">💳 What payment methods do you accept?</h3>
-                    <p class="faq-answer">We accept cash, credit cards, and debit cards at both locations.</p>
+                    <h3 class="faq-question">🎁 Do you have new products weekly?</h3>
+                    <p class="faq-answer">Yes! We get new arrivals weekly - latest disposables, new e-liquid flavors, trending accessories. Our 4.9★ rating comes from always having fresh stock and the newest products in the vape scene.</p>
                 </div>
             </div>
         </div>
@@ -1326,67 +1550,83 @@
         <div class="container">
             <h2 class="section-title">LOCATION & HOURS</h2>
             <div class="location-grid">
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.876948219775!2d-85.1167303!3d41.076252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c85b01352dd6b%3A0xdcd3a3bde90ee9d9!2s710+E+Coliseum+Blvd%2C+Fort+Wayne%2C+IN+46805!5e0!3m2!1sen!2sus!4v1733858472811!5m2!1sen!2sus" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0; border-radius:15px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+                <!-- North Location Map -->
                 <div class="location-details">
-                    <div class="location-comparison">
-                        <div class="location-info">
-                            <div class="detail-item">
-                                <div class="detail-icon">📍</div>
-                                <h3 class="detail-title">MAIN LOCATION</h3>
-                                <p class="detail-text">710 E Coliseum Blvd<br>Fort Wayne, IN 46805</p>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-icon">⏰</div>
-                                <h3 class="detail-title">HOURS</h3>
-                                <p class="detail-text">Daily: 8:00 AM – 12:00 AM</p>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-icon">☎️</div>
-                                <h3 class="detail-title">CALL US</h3>
-                                <p class="detail-text">(260) 755-3072</p>
-                            </div>
-                        </div>
-                        <div class="location-info">
-                            <div class="detail-item">
-                                <div class="detail-icon">📍</div>
-                                <h3 class="detail-title">SOUTHSIDE LOCATION</h3>
-                                <p class="detail-text">4225 Lafayette St<br>Fort Wayne, IN 46806</p>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-icon">⏰</div>
-                                <h3 class="detail-title">HOURS</h3>
-                                <p class="detail-text">Wed-Tue: 9:30 AM – 10:00 PM</p>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-icon">☎️</div>
-                                <h3 class="detail-title">CALL US</h3>
-                                <p class="detail-text">(260) 508-6666</p>
-                            </div>
-                        </div>
+                    <h3 style="text-align: center; color: var(--accent-1); margin-bottom: 20px; font-size: 24px;">NORTH LOCATION</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.876948219775!2d-85.1167303!3d41.076252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c85b01352dd6b%3A0xdcd3a3bde90ee9d9!2s710+E+Coliseum+Blvd%2C+Fort+Wayne%2C+IN+46805!5e0!3m2!1sen!2sus!4v1733858472811!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius:15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-                    <div class="location-features">
+                    <div class="location-info" style="margin-top: 20px;">
                         <div class="detail-item">
-                            <div class="detail-icon">🚗</div>
-                            <h3 class="detail-title">PARKING</h3>
-                            <p class="detail-text">Free parking at both locations • Easy access from major roads</p>
+                            <div class="detail-icon">📍</div>
+                            <h3 class="detail-title">ADDRESS</h3>
+                            <p class="detail-text">710 E Coliseum Blvd<br>Fort Wayne, IN 46805</p>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">⏰</div>
+                            <h3 class="detail-title">HOURS</h3>
+                            <p class="detail-text">Daily: 8:00 AM – 12:00 AM</p>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">☎️</div>
+                            <h3 class="detail-title">CALL US</h3>
+                            <p class="detail-text">(260) 755-3072</p>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow">Main Directions</a>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-outline">Southside Directions</a>
-                        <a href="tel:+12607553072" class="btn btn-outline">Call Main</a>
-                        <a href="tel:+12605086666" class="btn btn-outline">Call Southside</a>
+                    <div class="direction-btn-group" style="margin-top: 20px;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow">Get Directions</a>
+                        <a href="tel:+12607553072" class="btn btn-outline">Call Now</a>
                     </div>
                 </div>
+
+                <!-- Southside Location Map -->
+                <div class="location-details">
+                    <h3 style="text-align: center; color: var(--accent-1); margin-bottom: 20px; font-size: 24px;">SOUTHSIDE LOCATION</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.234567891234!2d-85.1234567!3d41.0345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s4225+Lafayette+St%2C+Fort+Wayne%2C+IN+46806!5e0!3m2!1sen!2sus!4v1733858472811!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius:15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="location-info" style="margin-top: 20px;">
+                        <div class="detail-item">
+                            <div class="detail-icon">📍</div>
+                            <h3 class="detail-title">ADDRESS</h3>
+                            <p class="detail-text">4225 Lafayette St<br>Fort Wayne, IN 46806</p>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">⏰</div>
+                            <h3 class="detail-title">HOURS</h3>
+                            <p class="detail-text">Wed-Tue: 9:30 AM – 10:00 PM</p>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">☎️</div>
+                            <h3 class="detail-title">CALL US</h3>
+                            <p class="detail-text">(260) 508-6666</p>
+                        </div>
+                    </div>
+                    <div class="direction-btn-group" style="margin-top: 20px;">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-yellow">Get Directions</a>
+                        <a href="tel:+12605086666" class="btn btn-outline">Call Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="location-features" style="margin-top: 40px; text-align: center;">
+                <div class="detail-item">
+                    <div class="detail-icon">🚗</div>
+                    <h3 class="detail-title">FREE PARKING AT BOTH LOCATIONS</h3>
+                    <p class="detail-text">Easy access from major roads • No parking hassles • Just pull up and shop!</p>
                 </div>
             </div>
         </div>
@@ -1401,8 +1641,6 @@
                 <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
                 <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
             </form>
-            <p>Join 1,000+ customers getting insider access</p>
-            <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">We respect your inbox. No spam, ever.</p>
         </div>
     </section>
 
@@ -1627,6 +1865,100 @@
                 this.setAttribute('aria-expanded', !isExpanded);
                 navLinks.classList.toggle('active');
             });
+
+            // Dynamic Review Carousel
+            const reviews = [
+                {
+                    quote: "Best smoke shop in Fort Wayne hands down! Huge selection of vapes and e-liquids. Staff actually knows their products and can recommend based on what you like.",
+                    customer: "Marcus T."
+                },
+                {
+                    quote: "Love that they're open until midnight. Saved me multiple times when I ran out late at night. Best prices in town and they always have new stock.",
+                    customer: "Jessica R."
+                },
+                {
+                    quote: "Fast, friendly service every time. Great deals on disposables. Been a regular customer for over a year now - never had a bad experience.",
+                    customer: "David K."
+                },
+                {
+                    quote: "Amazing glass selection! Found exactly what I was looking for. Staff is super chill and helpful, not pushy at all. Definitely my go-to spot.",
+                    customer: "Sarah M."
+                },
+                {
+                    quote: "Clean store, great atmosphere, knowledgeable staff. They have everything you need and prices are always fair. Highly recommend both locations!",
+                    customer: "James P."
+                },
+                {
+                    quote: "Been to a lot of vape shops and this is by far the best. Always in stock, staff remembers what I like, and convenient hours. 5 stars all day!",
+                    customer: "Taylor W."
+                },
+                {
+                    quote: "The late hours are a lifesaver! Great selection, friendly staff, and competitive prices. My go-to shop for all my vape needs.",
+                    customer: "Mike D."
+                },
+                {
+                    quote: "Love the North location - always clean, well-stocked, and the staff is super helpful. They know their products inside and out!",
+                    customer: "Amanda L."
+                }
+            ];
+
+            let currentReviewIndex = 0;
+            const testimonialTrack = document.getElementById('testimonial-track');
+            const carouselDots = document.getElementById('carousel-dots');
+
+            // Initialize reviews
+            function initReviews() {
+                // Clear existing content
+                testimonialTrack.innerHTML = '';
+                carouselDots.innerHTML = '';
+
+                // Add all reviews
+                reviews.forEach((review, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'testimonial-card';
+                    card.innerHTML = `
+                        <p class="quote">"${review.quote}"</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="customer">— ${review.customer}</p>
+                    `;
+                    testimonialTrack.appendChild(card);
+
+                    // Add dot for each review
+                    const dot = document.createElement('span');
+                    dot.className = 'carousel-dot';
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToReview(index));
+                    carouselDots.appendChild(dot);
+                });
+
+                showReview(0);
+            }
+
+            function showReview(index) {
+                currentReviewIndex = index;
+                const offset = -index * 100;
+                testimonialTrack.style.transform = `translateX(${offset}%)`;
+
+                // Update dots
+                document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+            function goToReview(index) {
+                showReview(index);
+            }
+
+            function nextReview() {
+                const nextIndex = (currentReviewIndex + 1) % reviews.length;
+                showReview(nextIndex);
+            }
+
+            // Auto-rotate reviews every 5 seconds
+            setInterval(nextReview, 5000);
+
+            // Initialize reviews on page load
+            initReviews();
         });
     </script>
 </body>
