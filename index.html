@@ -473,6 +473,20 @@
             justify-content: center;
         }
 
+        .location-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .location-info {
+            background: var(--supporting);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--accent-2);
+        }
+
         .detail-item {
             margin-bottom: 25px;
         }
@@ -794,7 +808,7 @@
                 <div class="why-card">
                     <div class="why-icon">⏰</div>
                     <h3 class="why-title">18-HOUR DAYS</h3>
-                    <p class="why-desc">Open 8 AM–12 AM When Others Close We're Just Opening</p>
+                    <p class="why-desc">Open 8 AM–12 AM <br> When Others Close, We're Still Here</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">📍</div>
@@ -890,7 +904,7 @@
             <h2 class="section-title">LOCATION & HOURS</h2>
             <div class="location-grid">
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2390.938050467023!2d-85.1167303!3d41.076252!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!2m1!1s710+E+Coliseum+Blvd+Fort+Wayne+IN!2m2!1d-85.1167303!2d41.076252!4m2!1d-85.1167303!2d41.076252!3m2!1s0x883c85b01352dd6b%3A0xdcd3a3bde90ee9d9!2s710+E+Coliseum+Blvd%2C+Fort+Wayne%2C+IN+46805!5e0!3m2!1sen!2sus!4v1733858472811!5m2!1sen!2sus&markers=!1m2!1s710+E+Coliseum+Blvd+Fort+Wayne+IN!2s4225+Lafayette+St+Fort+Wayne+IN" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.876948219775!2d-85.1167303!3d41.076252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c85b01352dd6b%3A0xdcd3a3bde90ee9d9!2s710+E+Coliseum+Blvd%2C+Fort+Wayne%2C+IN+46805!5e0!3m2!1sen!2sus!4v1733858472811!5m2!1sen!2sus" 
                         width="100%" 
                         height="400" 
                         style="border:0; border-radius:15px;" 
@@ -900,49 +914,56 @@
                     </iframe>
                 </div>
                 <div class="location-details">
-                    <!-- Main Location -->
-                    <div class="detail-item">
-                        <div class="detail-icon">📍</div>
-                        <h3 class="detail-title">MAIN LOCATION</h3>
-                        <p class="detail-text">710 E Coliseum Blvd<br>Fort Wayne, IN 46805</p>
+                    <div class="location-comparison">
+                        <div class="location-info">
+                            <div class="detail-item">
+                                <div class="detail-icon">📍</div>
+                                <h3 class="detail-title">MAIN LOCATION</h3>
+                                <p class="detail-text">710 E Coliseum Blvd<br>Fort Wayne, IN 46805</p>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">⏰</div>
+                                <h3 class="detail-title">HOURS</h3>
+                                <p class="detail-text">Daily: 8:00 AM – 12:00 AM</p>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">☎️</div>
+                                <h3 class="detail-title">CALL US</h3>
+                                <p class="detail-text">(260) 755-3072</p>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="detail-item">
+                                <div class="detail-icon">📍</div>
+                                <h3 class="detail-title">SOUTHSIDE LOCATION</h3>
+                                <p class="detail-text">4225 Lafayette St<br>Fort Wayne, IN 46806</p>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">⏰</div>
+                                <h3 class="detail-title">HOURS</h3>
+                                <p class="detail-text">Wed-Tue: 9:30 AM – 10:00 PM</p>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">☎️</div>
+                                <h3 class="detail-title">CALL US</h3>
+                                <p class="detail-text">(260) 508-6666</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">⏰</div>
-                        <h3 class="detail-title">HOURS</h3>
-                        <p class="detail-text">Open Daily<br>8:00 AM – 12:00 AM (Midnight)</p>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">☎️</div>
-                        <h3 class="detail-title">CALL US</h3>
-                        <p class="detail-text">(260) 755-3072</p>
-                    </div>
-                    <!-- Southside Location -->
-                    <div class="detail-item">
-                        <div class="detail-icon">📍</div>
-                        <h3 class="detail-title">SOUTHSIDE LOCATION</h3>
-                        <p class="detail-text">4225 Lafayette St<br>Fort Wayne, IN 46806</p>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">⏰</div>
-                        <h3 class="detail-title">HOURS</h3>
-                        <p class="detail-text">Wed-Tue<br>9:30 AM – 10:00 PM</p>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">☎️</div>
-                        <h3 class="detail-title">CALL US</h3>
-                        <p class="detail-text">(260) 508-6666</p>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-icon">🚗</div>
-                        <h3 class="detail-title">PARKING</h3>
-                        <p class="detail-text">Free parking available at both locations<br>Easy access from major roads</p>
+                    <div class="location-features">
+                        <div class="detail-item">
+                            <div class="detail-icon">🚗</div>
+                            <h3 class="detail-title">PARKING</h3>
+                            <p class="detail-text">Free parking at both locations • Easy access from major roads</p>
+                        </div>
                     </div>
                     <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow">Main Location Directions</a>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-outline" style="margin-left:5px;">Southside Directions</a>
-                        <a href="tel:+12607553072" class="btn btn-outline" style="margin-left:5px;">Call Main</a>
-                        <a href="tel:+12605086666" class="btn btn-outline" style="margin-left:5px;">Call Southside</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=710+E+Coliseum+Blvd,+Fort+Wayne,+IN+46805" target="_blank" class="btn btn-yellow">Main Directions</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=4225+Lafayette+St,+Fort+Wayne,+IN+46806" target="_blank" class="btn btn-outline">Southside Directions</a>
+                        <a href="tel:+12607553072" class="btn btn-outline">Call Main</a>
+                        <a href="tel:+12605086666" class="btn btn-outline">Call Southside</a>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
